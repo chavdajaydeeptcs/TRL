@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitCredentials() {
-    
     this.mainService.getPatients().subscribe(patientsData =>{
       let patients = patientsData.map((data) => {
         return {
