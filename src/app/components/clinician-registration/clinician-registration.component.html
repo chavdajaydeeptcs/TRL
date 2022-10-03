@@ -1,0 +1,320 @@
+
+<form [formGroup]="insertForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+    <div class="form-group">
+        <input 
+            formControlName="firstName"
+            name="firstName" 
+            id="firstName"
+            class="form-control col-xs-12 col-md-12"
+            placeholder="First Name"
+        />
+        <div *ngIf="formControls.firstName.touched && formControls.firstName.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.firstName.errors.required">First name is required.</div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <input
+            formControlName="lastName"
+            name="lastName" 
+            id="lastName"
+            class="form-control col-xs-12 col-md-12"
+            placeholder="Last Name"
+        />
+
+        <div *ngIf="formControls.lastName.touched && formControls.lastName.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.lastName.errors.required">Last name is required.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input formControlName="dob"
+                name="dob"
+                id="dob"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Date of Birth" type="date" value="" onChange="this.setAttribute('value', this.value)" />
+
+        <div *ngIf="formControls.dob.touched && formControls.dob.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.dob.errors.required">Date of Birth is required.</div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+       
+            <label for="sex" style="margin-right: 10px;">Sex</label>
+            <label class="radio-inline">
+              <input
+                formControlName="sex"
+                name="sex"
+                id="male"
+                type="radio"
+                value="Male"
+                style="margin: 0 0px 0 10px;"
+              />
+              Male
+            </label>
+
+            <label class="radio-inline">
+              <input
+                formControlName="sex"
+                name="sex"
+                id="female"
+                type="radio"
+                value="Female"
+                style="margin: 0 0px 0 10px;"
+              />
+              Female
+            </label>
+
+            <label class="radio-inline">
+              <input
+                formControlName="sex"
+                name="sex"
+                id="other"
+                type="radio"
+                value="Non-binary"
+                style="margin: 0 0px 0 10px;"
+              />
+              Non-binary
+            </label>
+       
+
+        <div *ngIf="formControls.sex.touched && formControls.sex.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.sex.errors.required">Gender is required.</div>
+        </div>
+    </div>
+
+  
+
+    <div class="form-group">
+        <input
+            formControlName="city"
+            name="city" 
+            id="city"
+            class="form-control col-xs-12 col-md-12"
+            placeholder="City"
+        />
+
+        <div *ngIf="formControls.city.touched && formControls.city.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.city.errors.required">City is required.</div>
+        </div>
+        
+    </div>
+    
+    <div class="form-group">
+        <select
+          formControlName="state"
+          name="state" 
+          id="state"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="State/Province"
+        >
+        <option label="State/Province" disabled></option>
+        <option  *ngFor="let state of states" >{{state}}</option> </select>
+    </div>
+
+    <div class="form-group">
+        <input
+          formControlName="clinicianLocation"
+          name="clinicianLocation"
+          id="clinicianLocation"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Address"
+        />
+
+        <div
+          *ngIf="formControls.clinicianLocation.touched && formControls.clinicianLocation.invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="formControls.clinicianLocation.errors.required">
+            Address is required.
+          </div>
+        </div>
+      </div>
+
+    <div class="form-group">
+        <input
+          formControlName="zipCode"
+          name="zipCode" 
+          id="zipCode"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Zip Code"
+          type="number"
+        />
+        <div *ngIf="formControls.zipCode.touched && formControls.zipCode.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.zipCode.errors.required">Zip code is required.</div>
+        </div>
+    
+    </div>
+
+    <div class="form-group regNum">
+        <input
+            formControlName="registrationNo"
+            name="registrationNo" 
+            id="registrationNo"
+            class="form-control col-xs-12 col-md-12"
+            placeholder="Registration Number"
+        />
+        <div *ngIf="formControls.registrationNo.touched && formControls.registrationNo.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.registrationNo.errors.required">Registration number is required.</div>
+        </div>
+    </div>
+
+
+    <label for="serviceType" style="margin-left: 5px;">Service type</label>
+
+    <div class="form-group col-md-6">
+        <label class="radio-inline">
+            <input formControlName="serviceType" name="serviceType" id="localCaregiver" type="radio" value="Local Care Giver"
+                style="margin: 0 0px 0 10px;" /> Local caregiver
+        </label>
+
+        <label class="radio-inline">
+            <input formControlName="serviceType" name="serviceType" id="remoteExpert" type="radio" value="Remote Expert"
+                style="margin: 0 0px 0 10px;" /> Remote expert
+        </label>
+
+    </div>
+
+
+    <!-- <div class="form-group col-md-6">
+
+        <label>Have you worked in any of the following areas related to critical care:</label>
+        <label class="checkbox-inline">
+            <input formControlName="criticalCare" name="criticalCare" id="er" type="checkbox"
+                style="margin: 0 0px 0 10px;" [ngValue]="ER" /> ER
+        </label>
+
+        <label class="checkbox-inline">
+            <input formControlName="criticalCare" name="criticalCare" id="icu" type="checkbox"
+                style="margin: 0 0px 0 10px;" [ngValue]="ICU" /> ICU
+        </label>
+
+        <label class="checkbox-inline">
+            <input formControlName="criticalCare" name="criticalCare" id="or" type="checkbox"
+                style="margin: 0 0px 0 10px;" [ngValue]="OR" /> OR
+        </label>
+
+        <label class="checkbox-inline">
+            <input formControlName="criticalCare" name="criticalCare" id="acute_care" type="checkbox"
+                style="margin: 0 0px 0 10px;" [ngValue]="ACUTE CARE" /> ACUTE CARE
+        </label>
+
+        <label class="checkbox-inline">
+            <input formControlName="criticalCare" name="criticalCare" id="pediatrics" type="checkbox"
+                style="margin: 0 0px 0 10px;" [ngValue]="PEDIATRICS" /> PEDIATRICS 
+        </label>
+
+    </div> -->
+
+
+    <div class="form-group">
+        <label>Have you worked in any of the following areas related to critical care:</label>
+        <div  *ngFor="let cCritical of temp">
+            <input name="criticalCare" type="checkbox"
+                style="margin: 0 0px 0 10px;" [value]="cCritical.name" (change)="Checked($event)"/> {{cCritical.name}}
+        </div>
+        <span>Specialty can be tailored to the disaster being responded to.</span>
+    </div>
+
+
+    <div class="form-group">
+        <select
+          formControlName="specialization"
+          name="specialization" 
+          id="specialization"
+          class="form-control col-xs-12 col-md-12">
+          <option label="Professional role type" disabled></option>
+          <option  *ngFor="let specialization of typeofClinicians" [ngValue]="specialization" >{{specialization}}</option> </select>
+    </div>
+
+
+    
+
+
+    <div class="form-group">
+        <input
+          formControlName="mobileNumber"
+          name="mobileNumber" 
+          id="mobileNumber"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Mobile Number"
+          maxlength="10"
+        />
+
+        <div *ngIf="formControls.mobileNumber.touched && formControls.mobileNumber.invalid" class="alert alert-danger" >
+            <div *ngIf="formControls.mobileNumber.errors.required">Mobile Number is required.</div>
+            <div *ngIf="formControls.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <input
+          formControlName="emailId"
+          name="emailId" 
+          id="emailId"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Email"
+          type="email"
+        />
+
+        <div *ngIf="formControls.emailId.touched && formControls.emailId.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.emailId.errors.required">Email id is required.</div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <input
+          formControlName="password"
+          name="password" 
+          id="password"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Password"
+          type="password"
+        />
+        <div *ngIf="formControls.password.touched && formControls.password.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.password.errors.required">Password is required.</div>
+        </div>
+    </div>
+
+      <div class="form-group">
+        <input
+          formControlName="password"
+          name="password" 
+          id="confirmPassword"
+          class="form-control col-xs-12 col-md-12"
+          placeholder="Confirm Password"
+          type="password"
+        />
+        <div *ngIf="formControls.password.touched && formControls.password.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.password.errors.required">Confirm Password is required.</div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <button type="submit" 
+                class="button1" 
+                [disabled]="!insertForm.valid">SUBMIT</button>
+    </div>
+
+</form>
+
+
+<!-- <div #modal *ngIf="showModal" class="modalContainer modal-dialog-centered">
+    <div class="modalBody">
+      <img src="../../../assets/Green-Circle-Tick.svg"
+           class="tick-complt"/>
+      <p>
+        Your registration has been submitted successfully . Thank you.
+      </p>
+      <p>Have a nice day!</p>
+      <button class="modalClose" (click)="closeModal()">OK</button>
+      <!-- class="modalClose" 
+    </div>
+  </div> -->

@@ -1,0 +1,302 @@
+.screen7 {
+  position: relative;
+  /* min-height: 570px; */
+  /* margin-top:30px; */
+}
+
+.back-title {
+  display: flex;
+  margin-left: 0.4rem;
+  align-items: center;
+}
+
+.back-title p {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.screening .main-content {
+  background-image: url("../../../assets/bg-pattern.svg");
+  background-repeat: no-repeat;
+  /* background-position:center; */
+}
+.screen7 .main-content {
+  margin: 0 auto;
+  max-width: 360px;
+  width: 100%;
+  padding: 15px;
+  background-color: #f6f8fa;
+}
+.screen-head p {
+  color: #fff;
+  text-align: center;
+}
+
+.ques-list {
+  background: #ffffff;
+  border-radius: 20px;
+  border-top: 7px solid #355e93;
+  margin: 20px auto;
+  margin-bottom: 22px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  background: url("../../../assets/icon-screening.svg");
+}
+
+.ques-list p {
+  margin-left: 1rem;
+}
+/* .screen-head {
+    background-color: #2A4B76;
+    } */
+.screen-step {
+  text-align: center;
+  padding-bottom: 9px;
+  margin-top: 2rem;
+}
+.screen-step ul li:focus {
+  background: #355e93;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.screen-step ul li {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #fff;
+  /* border: 1px solid; */
+  border-radius: 7px 7px 7px 7px;
+  margin-right: 13%;
+}
+
+.screen-step ul li.active-tab {
+  background-color: #2a4b76;
+  color: #eee;
+}
+
+.scre-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scre-button input[type="submit"] {
+  padding: 6px 20px;
+  border-radius: 27px;
+  background-color: #2a4b76;
+  color: #fff;
+  border: none;
+}
+.screen-que .p1 {
+  margin-top: 15px;
+  margin-bottom: 23px;
+}
+/* 
+    .active-tab{
+    background-color:#2A4B76;
+    color:#eee; 
+    } */
+
+.modalContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.modalBody {
+  padding: 3rem;
+  background-color: white;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+
+.modalClose {
+  background-color: #2a4b76;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1px solid #2a4b76;
+  border-radius: 1rem;
+}
+
+.container-chk {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  padding-top: 2px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  float: left;
+  margin-right: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.container-chk input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.container-chk .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-chk:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-chk input:checked ~ .checkmark {
+  background-color: #2a4b76;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-chk input:checked ~ .checkmark:after {
+  display: block;
+}
+/* for all p */
+.main-content p {
+  font-size: 15px;
+  line-height: normal;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* .comn-cnt{
+    margin-top: 70px;
+    } */
+.radio-sec {
+  height: 45px;
+}
+
+/* For tick mark */
+.screen-step li {
+  position: relative;
+}
+span.tick-mark img {
+  position: absolute;
+  top: -8px;
+  left: -7px;
+  width: 17px;
+  height: 17px;
+}
+
+/* .questionarie-list.true {
+  opacity: 1;
+}
+
+
+.questionarie-list.false {
+  opacity: 0.5;
+  pointer-events: none;
+} */
+/* Modified classes */
+
+.questionarie-list-true {
+  opacity: 1;
+}
+
+
+.questionarie-list-false {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+
+/* Modal */
+
+.modalContainer {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.modal-dialog-centered {
+  /* width: 300px; */
+  margin: 0 auto !important;
+  padding: 10px;
+  text-align: center;
+}
+
+.modalBody {
+  padding: 3rem;
+  background-color: white;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.modalClose {
+  background-color: #2a4b76;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1px solid #2a4b76;
+  border-radius: 1rem;
+}
+
+.modalBody img {
+  height: 42px;
+  margin-bottom: 28px;
+}
+
+.scre-button input:focus {
+  outline: none;
+}

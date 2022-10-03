@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "SF Pro Text";
+}
+
+.header{
+    padding:1.5rem;
+    background-color:#2a4b76;
+    margin:0;
+}
+
+#back-arrow{
+    color:white;
+    font-size:1.4rem;
+    margin-right:.5rem;
+}
+
+#view{
+    font-size:1.6rem;
+    margin-bottom: 1.4rem;
+    color:white;
+    display:inline-block;
+}
+
+.tab{
+    display:inline-block;
+    width:24%;
+    padding:.5rem;
+    font-size:1rem;
+    background-color:#2a4b76;
+    border:1px solid white;
+    color:white;
+    margin:0;
+    text-align:center;
+}
+
+.tabContainer{
+    display:inline-block;
+    padding:0;
+    width:100%;
+    /* border:1px solid white;
+    border-radius : 4px; */
+}
+
+.active-class{
+    color:#2a4b76 !important;
+    background-color:white !important;
+}
+
+#search-box{
+    margin:.5rem;
+    background-color:#8E8E931F;
+    color:#0000005C;
+    border-radius:.7rem;
+    border-color:transparent;
+    font-size:1rem;
+    padding:.5rem;
+    width:90%;
+    
+}
+.bodyContent{
+    padding:.5rem;
+}

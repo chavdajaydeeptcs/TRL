@@ -1,0 +1,45 @@
+
+<div class="scr-4-sec">
+    <!-- <div class="row"> -->
+        <!-- col-lg-4 col-12 -->
+        <div class=" screen4"> 
+            <div class="mainSec">
+                <div class="mtec-head">
+                    <div class="img-div">
+                        <img src="../../../assets/NETCCN-logo-OL.png"  class="logo" alt="back-arrow">
+                    </div>
+              
+                </div>
+                <div class="login-sec">
+                    <p class="login-form-title">Please Login to Continue</p>
+                  
+                        <div class = "username">
+                            <fa-icon id= "fa-user" [icon]="faUser"></fa-icon>
+                            <input type="text" id="email" [(ngModel)]="userName" placeholder="Enter Your Mobile Number" autocomplete="off">
+                        </div>
+                        <div class = "password">
+                            <fa-icon id="fa-unlk" [icon]="faUnlock"></fa-icon>
+                            <fa-icon id="fa-eye" [icon]="faEye"></fa-icon>
+                            <input type="password" [(ngModel)]="password" id ="pass" placeholder="Enter Your Password" autocomplete="off">
+                        </div>
+                       <div class="login-btn">
+                        <input type="submit"  (click)="submitCredentials()" id ="login" value ="Login">
+                       </div>
+                  
+                </div>
+                <div class="end-content">
+                    <div class="last-sec">
+                        <p class="first-time-user">First time user?</p>
+                        <button name="Register" id ="register" (click)="routeToRegistration()" value="Register"> Register</button>
+                    </div>
+                    <div class="last-sec2">
+                        <span class="powered-text"> 
+                            Powered by ReCCaMP
+                        </span>
+                      
+                    </div>
+                </div> 
+            </div>
+        </div>
+    <!-- </div> -->
+</div>

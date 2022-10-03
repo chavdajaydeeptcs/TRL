@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {font-family: "SF Pro Text"; src: url('./assets/1c45e28f8e86cc89876f003b953cc3e9.eot'); src: url("./assets/1c45e28f8e86cc89876f003b953cc3e9.eot") format("embedded-opentype"), url("./assets/1c45e28f8e86cc89876f003b953cc3e9.woff2") format("woff2"), url("./assets/1c45e28f8e86cc89876f003b953cc3e9.woff") format("woff"), url("./assets/1c45e28f8e86cc89876f003b953cc3e9.ttf") format("truetype"); }
+
+html, body , .root { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="353" height="197" viewBox="0 0 353 197">
+  <defs>
+    <filter id="Rectangle_69" x="0" y="0" width="353" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10.5" result="blur"/>
+      <feFlood flood-color="#122e53" flood-opacity="0.09"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_70" x="0" y="0" width="353" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10.5" result="blur-2"/>
+      <feFlood flood-color="#122e53" flood-opacity="0.09"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_67" x="0" y="0" width="353" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10.5" result="blur-3"/>
+      <feFlood flood-color="#122e53" flood-opacity="0.09"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_69)">
+        <rect id="Rectangle_69-2" data-name="Rectangle 69" width="290" height="134" rx="20" transform="translate(43 212)" fill="#fff"/>
+      </g>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.938" y1="1" x2="0.092" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6898d5"/>
+      <stop offset="1" stop-color="#355e93"/>
+    </linearGradient>
+  </defs>
+  <g id="btn_homescreen" transform="translate(31.5 27.5)">
+    <g transform="matrix(1, 0, 0, 1, -31.5, -27.5)" filter="url(#Rectangle_67)">
+      <rect id="Rectangle_67-2" data-name="Rectangle 67" width="290" height="134" rx="20" transform="translate(31.5 27.5)" fill="#fff"/>
+    </g>
+    <g id="Group_44" data-name="Group 44" transform="translate(-43 -212)">
+      <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(#clip-path)">
+        <rect id="Rectangle_68" data-name="Rectangle 68" width="353" height="35" transform="translate(11 185)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_43" data-name="Group 43">
+        <g id="Mask_Group_3" data-name="Mask Group 3" clip-path="url(#clip-path)">
+          <g id="Component_3_13" data-name="Component 3 – 13" transform="translate(233 270)" opacity="0.55">
+            <g id="Group_30" data-name="Group 30" opacity="0.3">
+              <g id="Ellipse_6" data-name="Ellipse 6" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="98.5" cy="98.5" r="98.5" stroke="none"/>
+                <circle cx="98.5" cy="98.5" r="98" fill="none"/>
+              </g>
+              <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(10 10)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="88.5" cy="88.5" r="88.5" stroke="none"/>
+                <circle cx="88.5" cy="88.5" r="88" fill="none"/>
+              </g>
+              <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(20 20)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="78.5" cy="78.5" r="78.5" stroke="none"/>
+                <circle cx="78.5" cy="78.5" r="78" fill="none"/>
+              </g>
+              <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(30 30)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="68.5" cy="68.5" r="68.5" stroke="none"/>
+                <circle cx="68.5" cy="68.5" r="68" fill="none"/>
+              </g>
+              <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(39 39)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="59.5" cy="59.5" r="59.5" stroke="none"/>
+                <circle cx="59.5" cy="59.5" r="59" fill="none"/>
+              </g>
+              <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(50 50)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="48.5" cy="48.5" r="48.5" stroke="none"/>
+                <circle cx="48.5" cy="48.5" r="48" fill="none"/>
+              </g>
+              <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(60 60)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="38.5" cy="38.5" r="38.5" stroke="none"/>
+                <circle cx="38.5" cy="38.5" r="38" fill="none"/>
+              </g>
+              <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(71 71)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="27.5" cy="27.5" r="27.5" stroke="none"/>
+                <circle cx="27.5" cy="27.5" r="27" fill="none"/>
+              </g>
+              <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(79 79)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="19.5" cy="19.5" r="19.5" stroke="none"/>
+                <circle cx="19.5" cy="19.5" r="19" fill="none"/>
+              </g>
+              <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(86 86)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="12.5" cy="12.5" r="12.5" stroke="none"/>
+                <circle cx="12.5" cy="12.5" r="12" fill="none"/>
+              </g>
+              <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(92 92)" fill="none" stroke="#707070" stroke-width="1">
+                <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
+                <circle cx="6.5" cy="6.5" r="6" fill="none"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Group_28" data-name="Group 28" transform="translate(-3 3.5)">
+          <line id="Line_5" data-name="Line 5" x2="9.299" y2="9.299" transform="translate(305.5 266.5)" fill="none" stroke="#b0b7c4" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_6" data-name="Line 6" y1="9.299" x2="9.299" transform="translate(305.5 275.799)" fill="none" stroke="#b0b7c4" stroke-linecap="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

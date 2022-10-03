@@ -1,0 +1,51 @@
+<div id="patient-container">
+  <div class="title">
+    <div class="wel-div">Welcome <span class="username-span">{{patientName}}</span></div>
+  </div>
+
+  <div>      
+    <ul>
+      <li class="liItem">
+        <div class="button-card go-screening-div" (click)="routeToScreeing()">
+          <img *ngIf="!allowTriageQuestionsRouting"
+                src="../../../assets/Green-Circle-Tick.svg" 
+                alt="Survey Done" 
+                class="green-tick" >
+
+          <div class="card-icon"><img  src="../../../assets/images/icon-screening.svg"></div>
+          <p class="dark-text">COVID19 Screening</p>
+          <p *ngIf="allowTriageQuestionsRouting" class="light-text">Have a Quick Access</p>
+          <div *ngIf="!allowTriageQuestionsRouting" class="light-text success-box">
+            <p class="success-message">Please accept the invitation </p>
+            <p class="success-message">in your e-mail</p>
+            <p class="success-message">and complete registration </p>
+          </div>
+          <!-- <a class="right-arrow-icon" routerLink="/patient-screening"><fa-icon [icon]="faChevronRight"></fa-icon></a> -->
+        </div>
+        <!-- <div class="button-card" routerLink="/available-clinicians">
+          <div class="card-icon"><img src="../../../assets/images/icon-clinician.svg"></div>
+          <p class="dark-text">Available Clinicians</p>
+          <p class="light-text">Connect for Advice</p>
+          
+        </div> -->
+        <!-- <a class="right-arrow-icon" routerLink="/available-clinicians"><fa-icon [icon]="faChevronRight"></fa-icon></a> -->
+        <!-- <div class="profile-settings-div">
+          <div class="profile-settings-button profile-button" (click)="routeToProfile()"><p class="button-par">My Profile</p></div>
+          <div class="profile-settings-button settings-button"><p class="button-par">Settings</p></div>
+        </div> -->
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+    <p> Powered by ReCCaMP</p>
+  </div>
+  <div #modal *ngIf="displaySuccessPopOver" class="modalContainer modal-dialog-centered">
+    <div class="modalBody">
+      <img
+        src="../../../assets/Green-Circle-Tick.svg"
+        class="tick-complt"/>
+      <p>Thank you for registering. You will receive an email invitation within 30 minutes where you can complete your registration and access care.</p>
+      <button class="modalClose"  (click)="closeModal()">OK</button>
+    </div>
+  </div>
+</div>

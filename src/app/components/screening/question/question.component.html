@@ -1,0 +1,16 @@
+<div class="ques2 ques-list">
+
+    <label class="chk-container">   
+
+    <input type="checkbox" 
+    class="ques-checkbox" 
+    [(ngModel)]="answer"
+    (change)="getAnswer()">
+    <!-- [disabled]="disableQue == true" -->
+        <span class="checkmark"></span>
+
+        <!-- <input type="text" value="{{this.disableQue}}"> -->
+      </label>
+      
+    <p>{{questionText}}</p>
+</div> 

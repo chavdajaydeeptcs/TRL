@@ -1,0 +1,119 @@
+*{
+  font-family: "SF Pro Text";
+}
+
+#parent-container {
+  max-width: 24rem;
+  font-size: 1.2rem;
+  
+  padding:.5rem;
+  background-image: url('../../../assets/bg-pattern.svg') ;
+  background-repeat: no-repeat;
+}
+
+#title{
+  margin-top:.4rem;
+}
+
+#available {
+  font-size: 0.9rem;
+}
+#back-arrow{
+  font-size:1.3rem;
+  color:white;
+  margin : 0 1rem;
+}
+
+.title-heading{
+  font-size:1.4rem;
+  color:white;
+}
+
+.counter-container{
+  display:flex;
+  align-items:center;
+
+
+}
+
+
+.count-holder{
+    margin-left:.5rem;
+    border-radius: 50%;
+    background-color: #E9EDEE;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-content{
+  position:relative;
+  top:7rem;
+  /* margin-left:1rem; */
+  margin-left:0;
+  
+}
+.inline{
+  display:inline;
+}
+
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+
+.liItem:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+#available , .liItem{
+  padding-left:1rem;
+}
+
+.contact-clinician {
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem .4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+.icon-holder{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.icon-div{
+    border-radius: 50%;
+    background-color: #E9EDEE;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat{
+  font-size:.7rem;
+}
+.chat:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  
+}
+
+
+@media only screen and (min-width: 520px) {
+    #parent-container{
+        max-width:35rem;
+        margin:auto;
+    }
+}

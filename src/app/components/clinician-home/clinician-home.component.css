@@ -1,0 +1,183 @@
+#clinician-container {
+    max-width: 24rem;
+    font-size: 1.2rem;
+    padding:.5rem;
+    background: #F6F8FA;
+    height: 100vh;
+}
+  
+.title {
+    text-align: center;
+    background-image: url('../../../assets/images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+}
+
+.footer {
+    top: 100% !important;
+    width: 100%;
+    text-align: center;
+    color:#282C35;
+    font-size:.8rem;
+  }
+
+
+.title .wel-div {
+    font-family: "SF Pro Text";
+    font-size: 22px;
+    color: #6898D5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title .username-span {
+    font-family: "SF Pro Text";
+    font-size: 22px;
+    color: #ffffff !important;
+    text-transform: capitalize;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.liItem {
+    text-align: center;
+}
+  
+.liItem:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.task-div .cont {
+    padding: 1.2em;
+    width: 70%;
+    background: #ffffff;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.single-button-div {
+    margin: 1.3em;
+}
+
+.single-button-style {
+    padding: 1.2em;
+    width: 70%;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.profile-settings-div {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-settings-button {
+    position: relative;
+    font-family: "SF Pro Text";
+    font-size: 18px;
+    width: 201px;
+    height: 145px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.profile-settings-button fa-icon {
+    position: absolute;
+    bottom: -8px;
+    font-size: 70px;
+    left: 6px;
+    color: #B0B7C4;
+    opacity: 0.2;
+}
+
+.profile-settings-button.profile-button {
+    /* background: #355E93; */
+    background: url('../../../assets/btn-profile.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.profile-settings-button.settings-button {
+    /* background: #6898D5;     */
+    background: url('../../../assets/btn-settings.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.button-card {
+    position: relative;
+    width: 353px;
+    height: 197px;
+    background: url('../../../assets/btn-homescreen.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    /* background: #ffffff; */
+    /* border-radius: 20px;
+    border-top: 7px solid #355E93; */
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.dark-text {
+    font-family: "SF Pro Text";
+    font-size: 22px;
+    font-weight: bold;
+    color: #323743;
+    text-align: left;
+    padding-left: 55px;
+    padding-top: 55px;
+    margin-bottom: 0px !important;
+}
+
+.light-text {
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    color: #777F8C;
+    text-align: left;
+    padding-left: 55px;
+    margin-bottom: 0px !important;
+}
+
+.right-arrow-icon {
+    position: absolute;
+    color: #B0B7C4;
+    right: 5px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.card-icon {
+    position: absolute;
+    left: 52px;
+    top: -7px;
+}
+
+.button-par {
+    margin-top: 54px;
+    margin-left: 24px;
+}
+  
+@media only screen and (min-width: 520px) {
+    #clinician-container{
+        max-width:35rem;
+        margin:auto;
+    }
+}

@@ -1,0 +1,38 @@
+<div id="clinician-container">
+    <div class="title">
+      <div class="wel-div">Welcome <span class="username-span">{{userDetails.firstName}}</span></div>
+    </div>
+  
+    <div>      
+      <ul>
+        <li class="liItem">
+          <div class="button-card" (click)="routeToViewScreenings(0)">
+            <div class="card-icon"><img src="../../../assets/images/icon-screening.svg"></div>
+            <p class="dark-text">View Screenings</p>
+            <p class="light-text"><span class="number-of-screenings">{{pendingPatients}}</span> New Screenings</p>
+            <!-- <a class="right-arrow-icon" (click)="routeToViewScreenings(0)"><fa-icon [icon]="faChevronRight"></fa-icon></a> -->
+            <!--  [queryParams]="{id: '1'}" -->
+          </div>
+          <div class="button-card" (click)="routeToViewScreenings(1)">
+            <div class="card-icon"><img src="../../../assets/images/icon-clinician.svg"></div>
+            <p class="dark-text">Review Virtual Wards<br>Patients</p>
+            <p class="light-text"><span class="number-of-screenings">{{virtualWardPatients}}</span> Patients</p>
+            <!-- <a class="right-arrow-icon" (click)="routeToViewScreenings(1)"> <fa-icon [icon]="faChevronRight"></fa-icon></a> -->
+          </div>
+          <div class="button-card">
+            <div class="card-icon"><img src="../../../assets/images/icon-screening.svg"></div>
+            <p class="dark-text">Heat Map</p>
+            <p class="light-text">View Heat Map of Any Area</p>
+            <!-- <a class="right-arrow-icon" routerLink=""><fa-icon [icon]="faChevronRight"></fa-icon></a> -->
+          </div>
+          <!-- <div class="profile-settings-div">
+            <div class="profile-settings-button profile-button"><p class="button-par">My Profile</p></div>
+            <div class="profile-settings-button settings-button"><p class="button-par">Settings</p></div>
+          </div> -->
+        </li>
+      </ul>
+    </div>
+    <div class="footer">
+      <p> Powered by ReCCaMP</p>
+    </div>
+</div>

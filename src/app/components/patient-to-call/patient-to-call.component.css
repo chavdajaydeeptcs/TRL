@@ -1,0 +1,76 @@
+*{
+   font-family: "SF Pro Text";
+}
+.data-holder{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.data-holder#first{
+    align-items: flex-start;
+}
+.parent{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin:auto;
+    width:100%;
+    padding:.5rem 0;
+    border-bottom:1px solid grey;
+}
+
+.name{
+    font-weight:200;
+    font-size:1.2rem;
+    color:#000000;
+}
+
+.date{
+    font-size:1rem;
+    color:#8C8C8C;
+}
+
+.call{
+    font-size:.9rem;
+    color:#8C8C8C;
+
+}
+.icon-holder{
+    
+    vertical-align: center;
+    
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-holder:focus{
+    transform : scale(1.2);
+    transform-origin: center;
+    cursor:pointer;
+    transform: rotate(90deg);
+}
+
+.healthPercent{
+    font-size:1.3rem;
+}
+
+.green{
+    color:green;
+}
+
+.orange{
+    color:orange;
+}
+.red{
+    color:red;
+}
+
+#call-icon{
+    color:#355E93;
+}

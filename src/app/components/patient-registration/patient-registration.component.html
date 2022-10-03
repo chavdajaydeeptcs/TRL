@@ -1,0 +1,427 @@
+<div class="parent">
+  <p class="heading">
+    Registration
+  </p>
+  <div class="form-body">
+    <div class="center row">
+      <div class="col-xs-5">
+        <input
+          name="options"
+          [(ngModel)]="options"
+          type="radio"
+          value="As patient"
+        />
+        <label class="radio-inline patient-clinician-label"> As patient</label>
+      </div>
+
+      <div class="col-xs-5" style="margin-right: 60px;">
+        <input
+          name="options"
+          [(ngModel)]="options"
+          type="radio"
+          value="As Clinician"
+        />
+        <label class="radio-inline patient-clinician-label">
+          As clinician</label
+        >
+      </div>
+    </div>
+
+    <div *ngIf="options === 'As patient'">
+      <form [formGroup]="insertForm" autocomplete="off">
+        <!--  (ngSubmit)="onSubmit()" -->
+        <mat-horizontal-stepper>
+          <mat-step label="Personal Details">
+            <div class="form-group">
+              <input
+                formControlName="firstName"
+                name="firstName"
+                id="firstName"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="First Name"
+              />
+
+              <div
+                *ngIf="
+                  formControls.firstName.touched &&
+                  formControls.firstName.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.firstName.errors.required">
+                  First name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="lastName"
+                name="lastName"
+                id="lastName"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Last Name"
+              />
+
+              <div
+                *ngIf="
+                  formControls.lastName.touched && formControls.lastName.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.lastName.errors.required">
+                  Last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="city"
+                name="city"
+                id="city"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="City"
+              />
+
+              <div
+                *ngIf="formControls.city.touched && formControls.city.invalid"
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.city.errors.required">
+                  City is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <select
+                formControlName="state"
+                name="state"
+                id="state"
+                class="form-control col-xs-12 col-md-12"
+              >
+                <option label="State/Province" disabled></option>
+                <option *ngFor="let state of states">{{ state }}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="patientLocation"
+                name="patientLocation"
+                id="patientLocation"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Location"
+              />
+
+              <div
+                *ngIf="
+                  formControls.patientLocation.touched &&
+                  formControls.patientLocation.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.patientLocation.errors.required">
+                  Location is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="zipCode"
+                name="zipCode"
+                id="zipCode"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Zip Code"
+                type="number"
+              />
+              <div
+                *ngIf="
+                  formControls.zipCode.touched && formControls.zipCode.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.zipCode.errors.required">
+                  Zip code is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="mobileNumber"
+                name="mobileNumber"
+                id="mobileNumber"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Mobile Number"
+                maxlength="10"
+              />
+              <div
+                *ngIf="
+                  formControls.mobileNumber.touched &&
+                  formControls.mobileNumber.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.mobileNumber.errors.required">
+                  Mobile Number is required.
+                </div>
+                <div *ngIf="formControls.mobileNumber.errors.pattern">
+                  Please, Enter 10 digit Mobile Number.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="emailId"
+                name="emailId"
+                id="emailId"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Email"
+                type="email"
+              />
+
+              <div
+                *ngIf="
+                  formControls.emailId.touched && formControls.emailId.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.emailId.errors.required">
+                  Email id is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="age"
+                name="age"
+                id="age"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Date of Birth"
+                type="date"
+                value=""
+                onChange="this.setAttribute('value', this.value)"
+              />
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="sex" style="margin-right: 10px;">Sex</label>
+              <label class="radio-inline">
+                <input
+                  formControlName="sex"
+                  name="sex"
+                  id="male"
+                  type="radio"
+                  value="Male"
+                  style="margin: 0 0px 0 10px;"
+                />
+                Male
+              </label>
+
+              <label class="radio-inline">
+                <input
+                  formControlName="sex"
+                  name="sex"
+                  id="female"
+                  type="radio"
+                  value="Female"
+                  style="margin: 0 0px 0 10px;"
+                />
+                Female
+              </label>
+
+              <label class="radio-inline">
+                <input
+                  formControlName="sex"
+                  name="sex"
+                  id="other"
+                  type="radio"
+                  value="Non-binary"
+                  style="margin: 0 0px 0 10px;"
+                />
+                Non-binary
+              </label>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="password"
+                name="password"
+                id="password"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Password"
+                type="password"
+              />
+
+              <div
+                *ngIf="
+                  formControls.password.touched && formControls.password.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.password.errors.required">
+                  Password is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                formControlName="password"
+                name="password"
+                id="confirmPassword"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Confirm Password"
+                type="password"
+              />
+            </div>
+
+            <div>
+              <button
+                class="button1"
+                (click)="onPreviousClick()"
+                mat-button
+                matStepperNext
+              >
+                Next
+              </button>
+            </div>
+          </mat-step>
+          <mat-step label="Family Details">
+            <button type="submit" class="button1">
+              + Add Emergency Contact
+            </button>
+
+            <div>
+              <div class="form-group">
+                <br />
+                <input
+                  formControlName="fullName"
+                  name="fullName"
+                  id="fullName"
+                  class="form-control col-xs-12 col-md-12"
+                  placeholder="Full Name"
+                />
+              </div>
+
+              <!-- <div class="form-group">
+                <input
+                  formControlName="relation"
+                  name="relation"
+                  id="relation"
+                  class="form-control col-xs-12 col-md-12"
+                  placeholder="Relation"
+                />
+              </div>
+              <div class="form-group"> -->
+
+              <div class="form-group">
+                <select
+                  formControlName="relation"
+                  name="relation"
+                  id="relation"
+                  class="form-control col-xs-12 col-md-12"
+                >
+                  <option label="Relation" disabled></option>
+                  <option *ngFor="let relationObj of relationA">{{
+                    relationObj
+                  }}</option>
+                </select>
+              </div>
+
+              <input
+                formControlName="familyMobileNumber"
+                name="familyMobileNumber"
+                id="familyMobileNumber"
+                class="form-control col-xs-12 col-md-12"
+                placeholder="Mobile Number"
+                maxlength="10"
+              />
+              <div
+                *ngIf="
+                  formControls.familyMobileNumber.touched &&
+                  formControls.familyMobileNumber.invalid
+                "
+                class="alert alert-danger"
+              >
+                <div *ngIf="formControls.familyMobileNumber.errors.pattern">
+                  Please, Enter 10 digit Mobile Number.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group consent-div">
+              <input (change)="changeConsent()" type="checkbox" id="consent"/>
+              <label>
+                <span>  </span>  I hereby consent to allow NETCCN to use my information for
+                clinical decision making.
+              </label>
+            </div>
+
+            <div>
+              <button mat-button matStepperPrevious class="button1">
+                Back
+              </button>
+            </div>
+            <br />
+            <div class="form-group">
+              <button
+                type="submit"
+                class="button1"
+                [ngClass]="consent === false ? 'opacityHalf' : 'opacityFull'"
+                [disabled]="consent === false"
+                (click)="onSubmit()"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </form>
+
+      <div
+        #modal
+        *ngIf="showModal"
+        class="modalContainer modal-dialog-centered"
+      >
+        <div class="modalBody">
+          <img
+            src="../../../assets/Green-Circle-Tick.svg"
+            class="tick-complt"
+          />
+          <p>
+            Your registration has been submitted successfully . Thank you.
+          </p>
+          <p>Have a nice day!</p>
+          <button class="modalClose" (click)="closeModal()">OK</button>
+          <!-- class="modalClose" -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="options === 'As Clinician'">
+    <app-clinician-registration (modalOpen)="openModal()">
+    </app-clinician-registration>
+  </div>
+
+  <div #modal *ngIf="showModal" class="modalContainer modal-dialog-centered">
+    <div class="modalBody">
+      <img src="../../../assets/Green-Circle-Tick.svg" class="tick-complt" />
+      <p>
+        Your registration has been submitted successfully.
+      </p>
+      <p *ngIf="options === 'As patient'">Please login to take screening.</p>
+      <p *ngIf="options === 'As Clinician'">
+        Please check your registered email.
+      </p>
+      <p>Thank you</p>
+      <button class="modalClose" (click)="closeModal()">OK</button>
+      <!-- class="modalClose" -->
+    </div>
+  </div>
+</div>

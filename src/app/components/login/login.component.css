@@ -1,0 +1,194 @@
+html , body{
+    height:100%;
+}
+
+
+.logo{
+    margin-top:1rem;
+    width:90%;
+}
+
+
+/* Main section CSS Wrapper */
+.screen4{
+    /* background-color: #143663; */
+    /* border: 1px solid; */
+    position: relative;
+    height: 100%;
+    width:100%;
+    
+    /* margin-top:30px; */
+    background-image: url('../../../assets/login-bg.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    
+}
+.mainSec {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+/* Head Section Css */
+.mtec-head {
+    /* width: 250px; */
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+   
+}
+.img-div {
+    display: inline-block;
+}
+.head-con{
+    width:52%;
+    display: inline-block;
+}
+.head-con p , .head-con h3{
+    color:#ffffff;
+    line-height: normal;
+}
+.head-con h3{
+    margin-bottom: 0;
+}
+.head-con p {
+    font-size: 13px;
+}
+/* Login sec */
+.login-sec{
+    /* position: relative;
+    bottom:4rem; */
+    margin-bottom: 9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-sec p {
+    color:#ffffff;
+}
+input#email,input#pass {
+    /* border:1px solid; */
+    
+    background: white;
+    padding: 10px;
+    border:none;    
+    /* max-width: 324px; */
+    width: 100%;
+    padding-left: 35px;
+}
+input#email{
+    border-bottom: 1px solid #dedbdb ;
+    border-radius: 14px 14px 0 0;
+}
+
+.username, .password {
+    position: relative;
+    padding: 0px;
+}
+
+#pass{
+    border-radius: 0 0 14px 14px;
+}
+input#login {
+    font-family: "SF Pro Text";
+    color:#ffffff;
+    margin-top: 20px;
+    border: none;
+    border-radius: 28px;
+    background: #355E93;
+    width:100%;
+    box-sizing:border-box;
+    padding: 10px;
+}
+input#email,input#pass,input#login {
+    outline: none;
+}
+.screen4 .non-pr {
+    text-align: center;
+    color: red;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.scr-4-sec{
+    background: #fafafa;
+    height:100%;
+    
+}
+/* 
+.scr-4-sec .row{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+} */
+
+.mtec-head h4{
+    margin-bottom: 0;
+}
+   
+
+/* last section */
+
+
+
+.last-sec {
+   
+    text-align: center;
+   
+}
+.last-sec p{
+    color: #ffffff;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.last-sec2 {
+    padding : .5rem 0;
+    text-align: center;
+    color: #fff;
+}
+#register {
+    font-family: "SF Pro Text";
+    border-radius: 28px;
+    padding: 6px 30px;
+    background: #355E93;
+    border: none;
+    color: #ffffff;
+}
+/* Font awesm */
+.username, .password {
+    position: relative;
+    padding: 0px;
+}
+#fa-user, #fa-unlk, #fa-eye{
+    position: absolute;
+    top: 11px;
+    left: 6px;
+    opacity: 0.5;    
+}
+#fa-eye{
+    right: 28px;
+    left: auto;
+}
+
+.last-sec .first-time-user{
+    font-family: "SF Pro Text";
+    color:black;
+}
+
+.ge-image {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.login-form-title {
+    font-family: "SF Pro Text";
+    padding-left: 5px;
+}    
+
+.powered-text{
+    color:#282C35;
+    font-size:.8rem;
+}

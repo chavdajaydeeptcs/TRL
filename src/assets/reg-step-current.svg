@@ -1,0 +1,11 @@
+<svg id="reg_step_current" data-name="reg step current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="6" cy="6" r="6" transform="translate(6 6)" fill="#355e93"/>
+  <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(3 3)" fill="none" stroke="#6898d5" stroke-width="1">
+    <circle cx="9" cy="9" r="9" stroke="none"/>
+    <circle cx="9" cy="9" r="8.5" fill="none"/>
+  </g>
+  <g id="Ellipse_4" data-name="Ellipse 4" fill="none" stroke="#acc5e6" stroke-width="1">
+    <circle cx="12" cy="12" r="12" stroke="none"/>
+    <circle cx="12" cy="12" r="11.5" fill="none"/>
+  </g>
+</svg>

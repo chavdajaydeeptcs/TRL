@@ -1,0 +1,310 @@
+*{
+    font-family:"SF Pro Text";
+}
+
+#back-arrow{
+    font-size:1.3rem;
+    color:white;
+    margin : 0 1rem;
+}
+  
+#title{
+    font-size : 1.3rem;
+}
+#patient-container {
+    /* max-width: 24rem; */
+    font-size: 1.2rem;
+   padding:1rem;
+    font-size: 14px;
+}
+@media only screen and (min-width: 520px) {
+    #patient-container{
+        max-width:35rem;
+        margin:auto;
+    }
+}
+
+
+.patient-header{
+    background: #2A4B76;
+    color: white;
+    padding: 6px;
+    padding-top:1rem;
+}
+.patient-detail{
+    /* min-height:10rem; */
+    display: flex;
+    background: #2A4B76;
+    color: white;
+    padding: 10px;
+}
+.patient-header label{
+    margin-left: 20px;
+}
+.patient-image{
+    width: 20%;
+    float: left;
+}
+
+.patient-info{
+    float: left;
+    width: 80%;
+    display:grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-template-columns: 40% 60%;
+    grid-row-gap : 1rem;
+}
+
+#age-span{
+    margin-left:-.5rem;
+}
+
+
+/* .patient-image img{
+    width: 55%;
+    height: 70%;
+    background-size: 30px 30px;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 12px;
+} */
+
+.patient-image img{
+    border-radius: 50%;
+    width:3rem;
+    height:3rem;
+    padding:0;
+    margin:0;
+}
+.info-label , #pillar{
+    color: #ccc;
+}
+.label-bold{
+    font-weight: 700;
+    padding:1rem 0;
+}
+.risk-meter-text{
+  float: left;
+  width: 100%;
+  font-size:.8rem;
+}
+
+
+
+.tab-list{
+    display:flex;
+    justify-content: space-evenly;
+    padding:1.5rem  2px;
+       
+}
+.tab{
+    list-style: none;
+    width:3rem;
+    height:2.5rem;
+    display:inline-block;
+    font-size:1.5rem;
+    color:#2A4B76;
+    background-color:#eee;
+    text-align:center;
+    vertical-align:center;
+    padding-top:.5rem;
+    border-radius:.6rem;
+}
+
+.active-tab{
+    background-color:#2A4B76;
+    color:#eee; 
+}
+
+.risk-meter{
+  margin:auto;
+  padding:0;
+  width:90%;
+}
+.meter{
+  list-style: none;
+  display:inline-block;
+  width:calc(100%/28);
+  height:.8rem;
+  border-top:1px solid grey;
+  border-bottom:1px solid grey;
+}
+
+.meter:first-of-type{
+  border-left:1px solid grey;
+  border-top-left-radius : 6px;
+  border-bottom-left-radius: 6px;
+}
+.meter:last-of-type{
+  border-right:1px solid grey;
+  border-bottom-right-radius : 6px;
+  border-top-right-radius: 6px;
+}
+
+.red-health{
+  background-color:#CA3433
+}
+
+
+.risk-meter-text span:nth-child(1) {
+    float: left;
+  }
+  .risk-meter-text span:nth-child(2) {
+    float: right;
+  }
+  .risk-meter-image{
+      float: left;
+      width: 100%;
+      margin:auto;
+      text-align:center;
+  }
+  .risk-meter-image img{
+    width: 100%;
+  }
+  .description-div{
+      width: 100%;
+      float: left;
+  }
+  .container-chk {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-chk input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-chk:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-chk input:checked ~ .checkmark {
+    background-color: #2A4B76;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-chk input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .assestment-report{
+      margin-top:1.4rem;
+  }
+
+
+
+
+  /* Style the checkmark/indicator */
+  .container-chk .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .feedback-text{
+      width: 100%;
+  }
+  .submit-btn{
+    background: #355E93;
+    float: right;
+    padding:1rem 1.8rem;
+    border-radius: 1.8rem;
+    font-size:1.1rem;
+    color: white;
+    cursor: pointer;
+    border-style:none;
+    -webkit-appearance: none;;
+    border:none;
+    margin-top:.5rem;
+  }
+
+  .locationDetails{
+   
+    margin:1rem auto;
+    width: 90%;
+    display:grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-columns: 20% 80%;
+    grid-row-gap : .5rem;
+  }
+  .feedback-section{
+      margin-top: 10px;
+      padding: 10px 0px;
+      float: left;
+      width: 100%;
+      
+  }
+  .slct-li{
+    list-style: none;
+    display:flex;
+    align-items: center;
+  }
+
+  .slct-li p{
+    display: inline-block;
+    padding-left: 14px;
+  }
+
+  .slct-li input{
+    position: relative;
+    top: -8px;
+    pointer-events: none;   
+  }
+
+  ul.ans-que-ul {
+    padding: 13px 27px;
+    background: #F6F8FA;
+    margin-top: 59px;
+  }
+
+  li.slct-li {
+    margin-top: 20px;
+    margin-bottom: 14px;
+    border-top: 7px solid #4675B2;
+    border-radius: 23px;
+    background: #fff;
+    padding: 15px;
+  }

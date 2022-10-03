@@ -1,0 +1,165 @@
+<div id="patient-container">
+  <div class="patient-header">
+    <fa-icon
+      [icon]="faArrowLeft"
+      id="back-arrow"
+      (click)="navigateBack()"></fa-icon>
+    <span id="title">Patient Details</span>
+  </div>
+  <div class="patient-detail">
+    <div class="patient-image">
+      <img src="../../../assets/user-image.png" />
+    </div>
+
+    <!-- *ngIf="(this.mainService.getSelectedPatient() | async) as patientDetail" -->
+    <div class="patient-info">
+      <label> {{patientDetails.firstName}} {{patientDetails.lastName}}</label>
+      <span id="age-span"> <span id="pillar"> |</span> {{patientAge}} </span>
+      <span class="info-label">Submitted: </span>
+      <label>06/20/2020</label>
+      <span class="info-label">Location: </span>
+      <span> {{patientDetails.city}} {{patientDetails.state}} </span>
+    </div>
+  </div>
+  <div class="assestment-report">
+    <label class="label-bold">Assessment Report:</label>
+    <p class="risk-meter-text">
+      <span>Covid-19 Risk Meter</span><span>High Risk</span>
+    </p>
+    <div class="risk-meter-image">
+      <ul class="risk-meter">
+        <li *ngFor="let item of meterList;let i = index" 
+            class="meter"
+            [ngClass]="i < healthScore ? 'red-health' : null">
+        </li>
+      </ul>
+     
+    </div>
+    <div class="ans-que">
+      <ul class="ans-que-ul">
+        <li *ngFor="let que of quesArray" class="slct-li">
+          <input type="checkbox" name="SelectedQue"  aria-selected="true" [checked]="true"> 
+          <p> {{que}} </p>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- <div class="tab-list-container">
+      <ul class="tab-list">
+        <li #tab class="tab" (click)="selectTab($event)">1</li>
+        <li #tab class="tab active-tab" (click)="selectTab($event)">2</li>
+        <li #tab class="tab" (click)="selectTab($event)">3</li>
+        <li #tab class="tab" (click)="selectTab($event)">4</li>
+      </ul>
+    </div>
+
+    <p>
+      During past 14 days: Have you been outside the USA or contacted many
+      people or worked/presented at a health facility
+    </p>
+    <label class="container-chk"
+      >Yes
+      <input
+        type="radio"
+        name="radioChk"
+        value="Yes"
+        (change)="changeTravelHistory($event)"
+        checked="checked"
+      />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container-chk"
+      >No
+      <input
+        type="radio"
+        value="No"
+        (change)="changeTravelHistory($event)"
+        name="radioChk"
+      />
+      <span class="checkmark"></span>
+    </label> -->
+    <!-- <table style="border-spacing: 15px">
+            <tr>
+                <td>Body Temperature:</td><td class="label-bold">High Fever(>102 F)</td>
+            </tr>
+            <tr>
+                <td>Symptoms:</td><td class="label-bold">Dry Cough , Sneezing , Moderate to Severe Cough , Breathlessness , Difficulty in Breathing , Persistent pain & pressure in chest</td>
+            </tr>
+            <tr>
+                <td>Travel & Exposure:</td><td class="label-bold">Close contact with confirmed Covid-19 patient</td>
+            </tr>
+            <tr>
+                <td>Per-Lying Conditions:</td><td class="label-bold">Diabetes , High Blood pressure , Heart Disease , Kidney Disease , Lung Disease</td>
+            </tr>
+            <tr>
+                <td>Last 48 Hours Status</td><td class="label-bold">Worsened Considerably</td>
+            </tr>
+        </table> -->
+  </div>
+  <div class="feedback-section">
+    <label class="label-bold">Feedback:</label>
+    <div class="feedback-selecttion">
+      <label class="container-chk"
+        >Healthy
+        <input
+          type="radio"
+          name="radio"
+          value="Healthy"
+          (change)="changeFeedback($event)"
+          [checked]="feedback ==='Healthy'"/>
+        <!-- checked="checked" -->
+        <span class="checkmark" ></span>
+      </label>
+      <label class="container-chk"
+        >Virtual Ward
+        <input
+          type="radio"
+          value="Virtual Ward"
+          (change)="changeFeedback($event)"
+          name="radio"
+          [checked]="feedback ==='Virtual Ward'"
+        />
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-chk"
+        >ICU
+        <input
+          type="radio"
+          value="ICU"
+          (change)="changeFeedback($event)"
+          name="radio"
+          [checked]="feedback ==='ICU'"
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div *ngIf="showLocationDetails" class="locationDetails">
+      <label for="facility">Facility</label>
+      <input type="text" [(ngModel)]="facilityDetails.facility" name="facility" id="facility">
+      
+      <label for="unit">Unit</label>
+      <input type="text" [(ngModel)]="facilityDetails.unit" name="unit" id="unit">
+      
+      <label for="room">Room</label>
+      <input type="text" [(ngModel)]="facilityDetails.room" name="room" id="room">
+
+      <label for="bed">Bed</label>
+      <input type="text" [(ngModel)]="facilityDetails.bed" name="bed" id="bed"> 
+    </div>
+
+    <textarea
+      class="feedback-text"
+      [(ngModel)]="feedbackDiscription"
+      rows="4"
+      placeholder="Enter Feedback"
+    ></textarea>
+    <button type="button" 
+            class="submit-btn" 
+            [disabled]="disableSubmit"
+            (click)="submitSurvey()">
+      Submit
+    </button>
+  </div>
+</div>

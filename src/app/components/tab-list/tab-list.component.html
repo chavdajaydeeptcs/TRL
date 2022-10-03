@@ -1,0 +1,23 @@
+<div class="parent-container">
+  <div class="header">
+    
+      <fa-icon [icon]="faArrowLeft" id="back-arrow" (click)="navigateBack()"></fa-icon>
+      <p id="view">View Screenings</p>
+    
+    <div class="tabContainer">
+      <ul class="">
+        <li
+          *ngFor="let tab of tabs; let i = index"
+          (click)="selectTab(tab)"
+          class="tab"
+          [ngClass]="i == selectedTabIndex ? 'active-class' : null">
+          {{ tab.tabName }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bodyContent">
+    <input type="search" name="search" id="search-box" placeholder="Search" />
+    <ng-content> </ng-content>
+  </div>
+</div>

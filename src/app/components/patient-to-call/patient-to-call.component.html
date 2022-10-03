@@ -1,0 +1,13 @@
+<div class="parent">
+  <div class="data-holder" id="first">
+    <span class="name">{{ patientName }}</span>
+    <span class="date">{{ patientDate }}</span>
+  </div>
+  <div class="data-holder">
+    <div class="icon-holder">
+      <!-- <fa-icon [icon]="faPhone" id="call-icon"></fa-icon> -->
+      <span class="healthPercent" [ngClass]="getColor(healthPercent)">{{healthPercent}}%</span>
+    </div>
+    <span class="call">Risk</span>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<tab-list [selectedTabIndex]="tabIndexHighlight">
+  <!--  [isActive]="tabInidex ==1" -->
+  <screening-tab tabName="Pending" [isActive]="tabIndexHighlight == 0">
+    <div *ngFor="let patient of patientCategories['Pending']">
+      <patient-to-call
+        (click)="selectPatient(patient); routeToProfile()"
+        patientName="{{ patient.firstName }} {{ patient.lastName }}"
+        patientDate="27/4/20"
+        healthPercent={{patient.healthPercent}}
+      >
+      </patient-to-call>
+    </div>
+  </screening-tab>
+
+  <screening-tab tabName="Ward" [isActive]="tabIndexHighlight == 1">
+    <div *ngFor="let patient of patientCategories['Virtual Ward']">
+      <patient-to-call
+        (click)="selectPatient(patient); routeToProfile()"
+        patientName="{{ patient.firstName }} {{ patient.lastName }}"
+        patientDate="27/4/20"
+        healthPercent={{patient.healthPercent}}
+      ></patient-to-call>
+    </div>
+  </screening-tab>
+
+  <screening-tab tabName="ICU" [isActive]="false">
+    <div *ngFor="let patient of patientCategories['ICU']">
+      <patient-to-call
+        (click)="selectPatient(patient); routeToProfile()"
+        patientName="{{ patient.firstName }} {{ patient.lastName }}"
+        patientDate="27/4/20"
+        healthPercent={{patient.healthPercent}}
+      ></patient-to-call>
+    </div>
+  </screening-tab>
+
+  <screening-tab tabName="Healthy" [isActive]="false">
+    <div *ngFor="let patient of patientCategories['Healthy']">
+      <patient-to-call
+        (click)="selectPatient(patient); routeToProfile()"
+        patientName="{{ patient.firstName }} {{ patient.lastName }}"
+        patientDate="27/4/20"
+        healthPercent={{patient.healthPercent}}
+      ></patient-to-call>
+    </div>
+  </screening-tab>
+</tab-list>

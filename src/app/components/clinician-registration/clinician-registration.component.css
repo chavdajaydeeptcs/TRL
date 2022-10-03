@@ -1,0 +1,92 @@
+form {
+    padding: 0 24px 24px 24px;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: #dc3545;
+}
+
+div.validation-error{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.button1 {
+    color: #ffffff;
+    margin-top: 20px;
+    border: none;
+    border-radius: 28px;
+    background: #355E93;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+input[type="date"]:before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+    width: 85%;
+    transform: translate(1px,-9px);
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:not([value=""]):before {
+    display: none;
+}
+
+
+.modalContainer{
+width:100vw;
+height:100%;
+background-color: rgba(0,0,0,.3);
+position:absolute;
+top:0;
+left:0; 
+z-index:2;
+display:flex;
+align-items:center;
+}
+
+.modal-dialog-centered {
+/* width: 300px; */
+margin: 0 auto !important;
+padding: 10px;
+text-align: center;
+}
+
+.modalBody{
+padding:3rem;
+background-color:white;
+color:black;
+font-size:1.4rem;
+}
+
+.modalClose{
+background-color:#2A4B76;
+color:white;
+padding:.8rem 1.6rem;
+font-size:1.4rem;
+text-align:center;
+border : 1px solid #2A4B76 ;
+border-radius : 1rem;
+}
+
+
+.opacityHalf{
+    opacity:0.5;
+}
+
+.opacityFull{
+    opacity : 1;
+}
