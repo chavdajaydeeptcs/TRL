@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "dist/",
-    "site": "mtec-covid19",
+    "site": "trl-evaluation-tool",
     "ignore": [
       "firebase.json",
       "**/.*",
